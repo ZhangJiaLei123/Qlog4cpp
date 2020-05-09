@@ -1,0 +1,39 @@
+2020-05-09 19:20:09,548 -- [ INFO] : system is running
+2020-05-09 19:20:09,550 -- [ WARN] : system has a warning
+2020-05-09 19:20:09,550 -- [ERROR] : system has a error, can't find a file
+2020-05-09 19:20:09,552 -- [FATAL] : system has a fatal error,must be shutdown
+2020-05-09 19:20:09,552 -- [ INFO] : system shutdown,you can find some information in system log
+2020-05-09 19:20:09,553 -信息- [ INFO] : system is running
+2020-05-09 19:20:09,553 -信息- [ WARN] : system has a warning
+2020-05-09 19:20:09,553 -信息- [ERROR] : system has a error, can't find a file
+2020-05-09 19:20:09,553 -信息- [FATAL] : system has a fatal error,must be shutdown
+2020-05-09 19:20:09,553 -信息- [ INFO] : system shutdown,you can find some information in system log
+2020-05-09 19:20:09,554 -警告- [ WARN] : 2system has a warning
+2020-05-09 19:20:09,554 -警告- [ERROR] : 2system has a error, can't find a file
+2020-05-09 19:20:09,554 -警告- [FATAL] : 2system has a fatal error,must be shutdown
+2020-05-09 19:21:55,373 -- [ INFO] : system is running
+2020-05-09 19:21:55,374 -- [ WARN] : system has a warning
+2020-05-09 19:21:55,375 -- [ERROR] : system has a error, can't find a file
+2020-05-09 19:21:55,375 -- [FATAL] : system has a fatal error,must be shutdown
+2020-05-09 19:21:55,375 -- [ INFO] : system shutdown,you can find some information in system log
+2020-05-09 19:21:55,375 -信息- [ INFO] : system is running
+2020-05-09 19:21:55,375 -信息- [ WARN] : system has a warning
+2020-05-09 19:21:55,375 -信息- [ERROR] : system has a error, can't find a file
+2020-05-09 19:21:55,377 -信息- [FATAL] : system has a fatal error,must be shutdown
+2020-05-09 19:21:55,377 -信息- [ INFO] : system shutdown,you can find some information in system log
+2020-05-09 19:21:55,377 -警告- [ WARN] : 2system has a warning
+2020-05-09 19:21:55,377 -警告- [ERROR] : 2system has a error, can't find a file
+2020-05-09 19:21:55,378 -警告- [FATAL] : 2system has a fatal error,must be shutdown
+2020-05-09 19:39:42,966 -- [ INFO] : system is running
+2020-05-09 19:39:42,966 -- [ WARN] : system has a warning
+2020-05-09 19:39:42,967 -- [ERROR] : system has a error, can't find a file
+2020-05-09 19:39:42,967 -- [FATAL] : system has a fatal error,must be shutdown
+2020-05-09 19:39:42,967 -- [ INFO] : system shutdown,you can find some information in system log
+2020-05-09 19:39:42,967 -信息- [ INFO] : system is running
+2020-05-09 19:39:42,967 -信息- [ WARN] : system has a warning
+2020-05-09 19:39:42,967 -信息- [ERROR] : system has a error, can't find a file
+2020-05-09 19:39:42,967 -信息- [FATAL] : system has a fatal error,must be shutdown
+2020-05-09 19:39:42,968 -信息- [ INFO] : system shutdown,you can find some information in system log
+2020-05-09 19:39:42,968 -警告- [ WARN] : 2system has a warning
+2020-05-09 19:39:42,968 -警告- [ERROR] : 2system has a error, can't find a file
+2020-05-09 19:39:42,968 -警告- [FATAL] : 2system has a fatal error,must be shutdown
