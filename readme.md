@@ -5,4 +5,6 @@ log4cpp的demo,基于vs2019编译运行成功.
 |- Qlog4c                     [项目文件夹] 
     |--lib                    [dll和头文件]
         |---include           [dll头文件]
+            |----log45pp.props项目属性配置
     |--src                    [项目源码]
+    |log4cpp.conf             log4cpp的配置文件
