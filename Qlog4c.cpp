@@ -1,59 +1,52 @@
 ﻿// Qlog4c.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 // 
 #include <log4cpp/Qlog4cpp/qlog4cpp.h> 
-
-using namespace std;
+ 
 
 /**
 * Qlog 快速配置
 */
-void QlogInit() {
-    try {
-        log4cpp::PropertyConfigurator::configure("./log4cpp.conf");
-    }
-    catch (log4cpp::ConfigureFailure& f) {
-
-    }
-
-    log4cpp::OstreamAppender* osAppender = new log4cpp::OstreamAppender("osAppender", &cout);
-    log4cpp::PatternLayout* pLayout = new log4cpp::PatternLayout();
-    pLayout->setConversionPattern("%d{%Y-%m-%d %H:%M:%S,%l} %c-> [%5p] %x: %m%n"); // 时间 TAG [等级] : 消息
-    osAppender->setLayout(pLayout);
-   // osAppender->getName("");
+void QlogTest() {
+  
     // 根日志
-    log4cpp::Category& root = log4cpp::Category::getRoot();
-    root.addAppender(osAppender); // 最好只设置一次,否则执行 shutdown 时可能出错
-    root.debug("system is running");
-    root.info("system is running");
-    root.warn("system has a warning");
-    root.error("system has a error, can't find a file");
-    root.fatal("system has a fatal error,must be shutdown"); 
+    Q_LOG_DEBUG("测试日志%d", 1);
+    Q_LOG_INFO("测试日志%d", 2);
+    Q_LOG_NOTICE("测试日志%d", 3);
+    Q_LOG_WARN("测试日志%d", 4);
+    Q_LOG_ERROR("测试日志%d", 5);
+    Q_LOG_FATAL("测试日志%d", 6);
 
     // 模块1的Log
-    log4cpp::Category& info = root.getInstance("console");
-   // info.setPriority(log4cpp::Priority::INFO); // 低于此级别的信息将不会输出
-    info.debug("system is running");
-    info.info("system is running");
+    log4cpp::Category& info = Q_LOG_CREAT("app1");
+    info.debug("system is running %s", "日志");
+    info.info("system is running %s", "日志trst");
     info.warn("system has a warning");
     info.error("system has a error, can't find a file");
     info.fatal("system has a fatal error,must be shutdown"); 
 
     // 模块2的Log
-    log4cpp::Category& warn = root.getInstance("app2");
-  // warn.setPriority(log4cpp::Priority::WARN); // 低于此级别的信息将不会输出
+    log4cpp::Category& warn = Q_LOG_CREAT("app2");
     warn.debug("2system is running");
     warn.info("2system is running");
     warn.warn("2system has a warning");
     warn.error("2system has a error, can't find a file");
     warn.fatal("2system has a fatal error,must be shutdown"); 
-     
-    // 释放 关闭 
-    log4cpp::Category::shutdown();
+
+    log4cpp::Category& app3 = Q_LOG_CREAT("app3");
+    app3.debug("2system is running");
+    app3.info("2system is running");
+    app3.warn("2system has a warning");
+    app3.error("2system has a error, can't find a file");
+    app3.fatal("2system has a fatal error,must be shutdown");
+    
 }
 
 int main(int argc, char* argv[]) {
-
-    QlogInit();
-
+ 
+    printf("ceshi1");
+    log4cpp::QLog4cpp::NewInstance();
+    QlogTest();
+    log4cpp::QLog4cpp::Close();
+   
 	return 0;
 }
